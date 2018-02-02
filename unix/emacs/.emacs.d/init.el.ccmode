@@ -1,0 +1,143 @@
+;; ------------------------------------------ http://tuhdo.github.io/c-ide.html --------------------------------------
+
+(require 'package)
+(add-to-list 'package-archives
+         '("melpa" . "http://melpa.org/packages/") t)
+
+(package-initialize)
+
+(when (not package-archive-contents)
+    (package-refresh-contents))
+
+(unless (package-installed-p 'use-package)
+  (package-install 'use-package))
+
+(require 'use-package)
+(setq use-package-always-ensure t)
+
+(add-to-list 'load-path "~/.emacs.d/custom")
+
+(require 'setup-general)
+(if (version< emacs-version "24.4")
+    (require 'setup-ivy-counsel)
+  (require 'setup-helm)
+  (require 'setup-helm-gtags))
+;; (require 'setup-ggtags)
+(require 'setup-cedet)
+(require 'setup-editing)
+
+
+
+;; function-args
+;; (require 'function-args)
+;; (fa-config-default)
+;; (define-key c-mode-map  [(tab)] 'company-complete)
+;; (define-key c++-mode-map  [(tab)] 'company-complete)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (
+     zygospore
+     helm-gtags
+     helm
+     yasnippet
+     ;ws-butler
+     ;volatile-highlights
+     ;use-package
+     ;undo-tree
+     ;iedit
+     ;dtrt-indent
+     ;counsel-projectile
+     ;company
+     ;clean-aindent-mode
+     ;anzu
+     ))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+;;----------------------------------------------------------------------------------------------------- Mine ----------------------------------------------------------------
+(require 'package) ;; You might already have this line
+(let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
+		    (not (gnutls-available-p))))
+       (url (concat (if no-ssl "http" "https") "://melpa.org/packages/")))
+  (add-to-list 'package-archives (cons "melpa" url) t))
+(when (< emacs-major-version 24)
+  ;; For important compatibility libraries like cl-lib
+  (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
+(package-initialize) ;; You might already have this line
+
+
+;; Write backups to ~/.emacs.d/backup/
+(setq backup-directory-alist '(("." . "~/.emacs.d/backup"))
+      backup-by-copying      t  ; Don't de-link hard links
+      version-control        t  ; Use version numbers on backups
+      delete-old-versions    t  ; Automatically delete excess backups:
+      kept-new-versions      2 ; how many of the newest versions to keep
+      kept-old-versions      2) ; and how many of the old
+
+;;enable terminal mouse
+(xterm-mouse-mode 1)
+
+
+;; Keybinds (remove conflicts)
+;;add unbindings/rebindings for cc mode within this function
+(defun my-after-load-cc-mode ()
+ (define-key c-mode-base-map (kbd "M-j") nil)
+  ;(define-key c-mode-base-map (kbd "M-j") 'backward-char)
+)
+;;(eval-after-load "cc-mode" 'my-after-load-cc-mode) ;;for some reason this doesn't find function
+(eval-after-load "cc-mode" (define-key c-mode-base-map (kbd "M-j") nil))
+(eval-after-load "cc-mode" (define-key c-mode-base-map (kbd "C-j") nil))
+(eval-after-load "cc-mode" (define-key c-mode-base-map (kbd "C-M-j") nil))
+
+;; Keybinds (set)
+(global-set-key (kbd "M-i") 'previous-line)
+(global-set-key (kbd "M-j") 'backward-char)
+(global-set-key (kbd "M-k") 'next-line)
+(global-set-key (kbd "M-l") 'forward-char)
+;;(global-set-key (kbd "M-u") 'move-beginning-of-line) ;;prefer to move to indention
+(global-set-key (kbd "M-u") 'back-to-indentation)
+(global-set-key (kbd "M-o") 'move-end-of-line)
+
+;;move by word
+(global-set-key (kbd "M-C-l") 'forward-word)
+(global-set-key (kbd "M-C-j") 'backward-word)
+;;must unbind for C-M-i
+(global-unset-key (kbd "M-C-i"))
+(define-key minibuffer-local-map (kbd "M-C-0") 'completion-at-point) ;;doesn't work
+(global-set-key (kbd "M-C-i") 'previous-line)
+(global-set-key (kbd "M-C-k") 'next-line)
+;;(global-set-key (kbd "M-C-u") 'move-beginning-of-line)
+(global-set-key (kbd "M-C-u") 'back-to-indentation)
+(global-set-key (kbd "M-C-o") 'move-end-of-line)
+
+
+;;(global-set-key [C-backspace] 'backward-kill-word) ;;doesn't seem to work via terminal
+;;(global-set-key (kbd "C-DEL") 'forward-kill-word) ;;doesn't seem to work via terminal
+
+(global-unset-key(kbd "C-k"))
+(global-set-key (kbd "C-i") 'scroll-down-command) ;;emulate C-S-i since shift has issues being sent over terminal
+(global-set-key (kbd "C-k") 'scroll-up-command) ;;emulate C-S-k since shift has issues being sent over terminal
+
+;;(global-set-key (kbd "M-DEL") 'kill-word)
+
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(xterm-mouse-mode t))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
