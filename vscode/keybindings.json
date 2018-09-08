@@ -1,0 +1,94 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+    {
+        "key": "ctrl+alt+i",
+        "command": "macros.override_up"
+    },
+    {
+        "key": "ctrl+alt+k",
+        "command": "macros.override_down"
+    },
+    {
+        "key": "ctrl+alt+j",
+        "command": "macros.override_leftword"
+    },
+    {
+        "key": "ctrl+alt+l",
+        "command": "macros.override_rightword"
+    },
+    {
+        "key": "alt+i",
+        "command": "macros.override_up"
+    },
+    {
+        "key": "alt+k",
+        "command": "macros.override_down"
+    },
+    {
+        "key": "alt+j",
+        "command": "macros.override_left"
+    },
+    {
+        "key": "alt+l",
+        "command": "macros.override_right"
+    },
+    {
+        "key": "shift+alt+i",
+        "command": "macros.override_upselect"
+    },
+    {
+        "key": "shift+alt+k",
+        "command": "macros.override_downselect"
+    },
+    {
+        "key": "shift+alt+j",
+        "command": "macros.override_leftselect"
+    },
+    {
+        "key": "shift+alt+l",
+        "command": "macros.override_rightselect"
+    },
+    {
+        "key": "shif+ctrl+alt+j",
+        "command": "macros.override_leftselect"
+    },
+    {
+        "key": "shift+ctrl+alt+l",
+        "command": "macros.override_rightwordselect"
+    },
+    {
+        "key": "shift+ctrl+alt+j",
+        "command": "macros.override_leftwordselect"
+    },
+    {
+        "key": "shift+ctrl+alt+k",
+        "command": "macros.override_downselect"
+    },
+    {
+        "key": "shift+ctrl+alt+i",
+        "command": "macros.override_upselect"
+    },
+
+
+    {
+        "key": "shift+ctrl+alt+o",
+        "command": "macros.override_endselect"
+    },
+    {
+        "key": "shift+ctrl+alt+u",
+        "command": "macros.override_homeselect"
+    },
+    {
+        "key": "ctrl+alt+o",
+        "command": "macros.override_end"
+    },
+    {
+        "key": "ctrl+alt+u",
+        "command": "macros.override_home"
+    },
+    {
+        "key": "shift+ctrl+alt+/",
+        "command": "macros.override_showinexplorer"
+    },
+    
+]

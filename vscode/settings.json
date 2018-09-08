@@ -1,0 +1,64 @@
+{
+    "macros": {
+        "override_up": [
+            "cursorUp"
+        ],
+        "override_down": [
+            "cursorDown"
+        ],
+        "override_left": [
+            "cursorLeft"
+        ],
+        "override_right": [
+            "cursorRight"
+        ],
+
+
+        "override_home": [
+            "cursorHome"
+        ],
+        "override_end": [
+            "cursorEnd"
+        ],
+        "override_homeselect": [
+            "cursorHomeSelect"
+        ],
+        "override_endselect": [
+            "cursorEndSelect"
+        ],
+
+
+        "override_leftword": [
+            "cursorWordLeft"
+        ],
+        "override_rightword": [
+            "cursorWordRight"
+        ],
+
+
+        "override_upselect": [
+            "cursorUpSelect"
+        ],
+        "override_downselect": [
+            "cursorDownSelect"
+        ],
+        "override_leftselect": [
+            "cursorLeftSelect"
+        ],
+        "override_rightselect": [
+            "cursorRightSelect"
+        ],
+
+
+        "override_leftwordselect": [
+            "cursorWordLeftSelect"
+        ],
+        "override_rightwordselect": [
+            "cursorWordRightSelect"
+        ],
+        "override_showinexplorer": [
+            "revealFileInOS"
+        ],
+
+    }
+}
