@@ -115,5 +115,78 @@
         "command": "-editor.action.formatSelection",
         "when": "editorHasSelection && editorTextFocus && !editorReadonly"
     },
+    {
+        "key": "ctrl+k s",
+        "command": "-workbench.action.files.saveAll"
+    },
+    {
+        "key": "ctrl+shift+s",
+        "command": "workbench.action.files.saveAll"
+    },
+    {
+        "key": "ctrl+shift+s",
+        "command": "-workbench.action.files.saveAs"
+    },
+
+    {
+        "key": "ctrl+shift+k",
+        "command": "macros.override_pageDown"
+    },
+    {
+        "key": "ctrl+shift+i",
+        "command": "macros.override_pageUp"
+    },
+    
+    //debugging
+    {
+        "key": "ctrl+alt+w",
+        "command": "macros.override_debugger_continue"
+    },
+    {
+        "key": "ctrl+alt+s",
+        "command": "macros.override_debugger_step"
+    },
+    {
+        "key": "ctrl+alt+d",
+        "command": "macros.override_debugger_stepinto"
+    },
+    {
+        "key": "ctrl+alt+a",
+        "command": "macros.override_debugger_stepout"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "macros.override_debugger_startexecution"
+    },
+    {
+        "key": "ctrl+f2",
+        "command": "macros.override_debugger_stopexecution"
+    },
+    {
+        "key" : "shift+ctrl+b",
+        "command":"macros.override_debugger_togglebreakpoint"
+    },
+
+    //code navigation
+    {
+        "key" : "shift+alt+s",
+        "command":"macros.override_find_symbols"
+    },
+    {
+        "key" : "alt+m",
+        "command":"macros.override_go_to_symbol"
+    },
+    {
+        "key" : "alt+ctrl+e",
+        "command":"macros.override_go_to_definition"
+    },
+    {
+        "key" : "shift+ctrl+alt+e",
+        "command":"macros.override_peak_definition"
+    },
+    {
+        "key" : "shift+alt+o",
+        "command":"macros.override_quick_open_file"
+    },
     
 ]

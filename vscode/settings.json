@@ -1,5 +1,10 @@
 {
+    //for extension "macros 1.2.1 by geddski"
+    //allows creating macros that can have keybinds.
+    //this lets me have more than a single keybind for a given action. 
+    //I create a macro, which wraps the action, and keybind that macro.
     "macros": {
+        //TEXT EDITIOR 
         "override_up": [
             "cursorUp"
         ],
@@ -56,8 +61,94 @@
         "override_rightwordselect": [
             "cursorWordRightSelect"
         ],
+
+        "override_pageUp": [
+            "cursorPageUp"
+        ],
+        "override_pageDown": [
+            "cursorPageDown"
+        ],
+        
+
         "override_showinexplorer": [
             "revealFileInOS"
         ],
-    }
+
+
+        //DEBUGGER
+        "override_debugger_continue": [
+            "workbench.action.debug.continue"
+        ],
+        "override_debugger_step": [
+            "workbench.action.debug.stepOver"
+        ],
+        "override_debugger_stepinto": [
+            "workbench.action.debug.stepInto"
+        ],
+        "override_debugger_stepout": [
+            "workbench.action.debug.stepOut"
+        ],
+        "override_debugger_startexecution" : [
+            "workbench.action.debug.start"
+        ],
+        "override_debugger_stopexecution": [
+            "workbench.action.debug.stop"
+        ],
+        "override_debugger_togglebreakpoint" : [
+            "editor.debug.action.toggleBreakpoint"
+        ],
+
+        //CODE NAVIGATION
+        "override_find_symbols" : [
+            "workbench.action.showAllSymbols"
+        ],
+        "override_go_to_symbol" : [ 
+            "workbench.action.gotoSymbol"
+        ],
+        "override_go_to_definition" : [
+            "editor.action.goToDeclaration"
+        ],
+        "override_peak_definition" : [
+            "editor.action.previewDeclaration"
+        ],
+        "override_quick_open_file" : [
+            "workbench.action.quickOpen"
+        ],
+        
+    },
+
+    "workbench.colorCustomizations": {
+        "editor.background": "#040404",
+        // "editor.background": "#000000"
+    },
+    
+    "editor.tokenColorCustomizations": {
+        "functions": "#2ECA00",
+        "keywords": "#ff9c6c",
+        "variables": "#7D8DFF",
+        "types": "#FFFF93",
+        //"comments": "#808080", //classic light-gray comments
+        "comments": "#DD0000", 
+        // "strings": "#6A9955", /* to match vscode default comment color*/
+        "textMateRules": [
+            //HTML
+            // {
+            //     "scope" : "entity.name.tag",
+            //     "settings" : {"foreground": "#ff9c6c" },
+            //     //"settings" : {"foreground": "#7D8DFF" },
+            // },
+            // {
+            //     "scope" : "support.type.property-name",
+            //     "settings" : {"foreground": "#7D8DFF" },
+            // },
+            // {
+            //     "scope" : "entity.other.attribute-name",
+            //     "settings" : {"foreground": "#7D8DFF" },
+            // },
+        ],
+    },
+
+
+    "window.zoomLevel": -1,
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe"
 }
