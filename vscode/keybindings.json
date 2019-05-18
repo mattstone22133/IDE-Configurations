@@ -136,6 +136,21 @@
         "key": "ctrl+shift+i",
         "command": "macros.override_pageUp"
     },
+    {
+        "key": "alt+shift+r",
+        "command": "macros.override_renameSymbol"
+    },
+    {
+        "key": "alt+shift+f",
+        "command": "macros.override_find_all_references"
+    },
+    {
+        "key": "ctrl+alt+shift+f",
+        "command": "macros.override_find_in_files"
+    },
+
+    
+    
     
     //debugging
     {

@@ -68,7 +68,9 @@
         "override_pageDown": [
             "cursorPageDown"
         ],
-        
+        "override_renameSymbol": [
+            "editor.action.rename"
+        ],
 
         "override_showinexplorer": [
             "revealFileInOS"
@@ -114,6 +116,13 @@
         "override_quick_open_file" : [
             "workbench.action.quickOpen"
         ],
+        "override_find_all_references" : [
+            "editor.action.referenceSearch.trigger"
+        ],
+        "override_find_in_files" : [
+            "workbench.action.findInFiles"
+        ],
+        
         
     },
 
