@@ -148,8 +148,6 @@
         "key": "ctrl+alt+shift+f",
         "command": "macros.override_find_in_files"
     },
-
-    
     
     
     //debugging
