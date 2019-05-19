@@ -76,6 +76,13 @@
             "revealFileInOS"
         ],
 
+        "override_back" : [
+            "workbench.action.navigateBack"
+        ],
+        "override_forward" : [
+            "workbench.action.navigateForward"
+        ],
+
 
         //DEBUGGER
         "override_debugger_continue": [
@@ -123,6 +130,7 @@
             "workbench.action.findInFiles"
         ],
         
+
         
     },
 

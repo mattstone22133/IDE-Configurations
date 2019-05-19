@@ -148,7 +148,14 @@
         "key": "ctrl+alt+shift+f",
         "command": "macros.override_find_in_files"
     },
-    
+    {
+        "key": "ctrl+alt+shift+y",
+        "command": "macros.override_back"
+    },
+    {
+        "key": "ctrl+alt+shift+p",
+        "command": "macros.override_forward"
+    },
     
     //debugging
     {
