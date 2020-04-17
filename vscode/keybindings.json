@@ -201,6 +201,10 @@
         "command":"macros.override_go_to_definition"
     },
     {
+        "key" : "alt+g",
+        "command":"macros.override_go_to_definition"
+    },
+    {
         "key" : "shift+ctrl+alt+e",
         "command":"macros.override_peak_definition"
     },
