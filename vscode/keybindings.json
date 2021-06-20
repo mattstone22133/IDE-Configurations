@@ -1,4 +1,16 @@
 // Place your key bindings in this file to overwrite the defaults
+
+//NOTEs:
+
+// ctrl+shift+alt+u failing on ubuntu/linux
+// ctrl+shift+u enables unicode typing on ubuntu by default (language features). 
+// https://superuser.com/questions/358749/how-to-disable-ctrlshiftu
+// ultimately think this need to not use ibus language support. 
+// type language support in unity search, to find the application
+// change it from Ibus to XIM
+// relog or reboot
+// stop ubuntu's ctrl+alt+shit+u issues. 
+
 [
     {
         "key": "ctrl+alt+i",
